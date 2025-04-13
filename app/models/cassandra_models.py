@@ -31,8 +31,6 @@ class MessageModel:
         Returns:
             int: Next message ID
         """
-        new_id = uuid.uuid4()
-        logger.info(f"New message ID: {new_id}")
         # Get the next message ID
         query = "SELECT message_id FROM messages LIMIT 1"
         logger.info(f"Query: {query}")
